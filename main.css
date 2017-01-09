@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Slabo+27px');
+* { font-family: 'Roboto Condensed', 'Slabo 27px', 'Nanum Gothic', sans-serif; }
+
 body {
     margin: 0%;
 }
@@ -129,8 +133,8 @@ body {
     height: auto;
     min-width: 100vw;
     min-height: 100vh;
-    background-color: black;
     text-align: center;
+    background-color: black;
     /*overflow: hidden;*/
 }
 
@@ -194,9 +198,46 @@ body {
     /*overflow: hidden;*/
 }
 
+#nayeon {
+  background: linear-gradient(#044c94, #005ca9);
+
+}
+
+#jeongyeon {
+  background: linear-gradient(#005ca9, #9a0b27);
+
+}
+
+#momo {
+  background:linear-gradient(#9a0b27, #610215);
+}
+
+#sana {
+  background:linear-gradient(#610215, #596589);
+}
+
+#jihyo {
+  background:linear-gradient(#596589, #7c011e);
+}
+
+#mina {
+  background:linear-gradient(#7c011e,#024979);
+}
+
+#dahyeon {
+  background:linear-gradient(#024979,#5198c0);
+}
+
+#chayoung {
+  background:linear-gradient(#5198c0, #121318);
+}
+
+#ttewe {
+  background-color: #121318;
+}
 .left {
     position: relative;
-    margin-top: 180px;
+    margin-top: 18vh;
     width: 70%;
     height: auto;
     float: left;
@@ -321,9 +362,9 @@ body {
 
 .personmember {
     position: relative;
-    margin-top: 180px;
+    margin-top: 18vh;
     width: 30%;
-    height: auto;
+    height: 30%;
     display: inline;
     vertical-align: center;
     text-align: center;
@@ -331,13 +372,14 @@ body {
 }
 
 .personmember img {
-    width: 20vw;
-    height: auto;
+  height: 60vh;
+  width: auto;
 }
 
 .personmember p {
   font-weight: 900;
   font-size: 2em;
+  margin: 0px;
 }
 
 .endline {
