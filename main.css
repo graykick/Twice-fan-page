@@ -16,13 +16,6 @@ body {
     height: 15vh;
     z-index: 11;
     text-align: center;
-    /*color: white;
-    background-image: url(a-titlebg3.png);
-    filter: brightness(0.3);
-    text-align: center;
-    background-size: 3px 3px;
-    z-index: 11;
-    transition: all 1s ease-in-out;*/
 }
 
 #headermask {
@@ -40,17 +33,11 @@ body {
 
 #headermask:hover {
     filter: brightness(1);
-    /*position: fixed;
-  top: 0%;
-  left: 0%;*/
     width: 100vw;
     height: 15vh;
     color: white;
-    /*background: linear-gradient( to left bottom, transparent 33%, white 33%, white 66%, transparent 66%);*/
     background-image: url(a-titlebg3.png);
-    /*background: linear-gradient( to right top, transparent 33%, gray 33%, gray 66%, transparent 66%);*/
     background-size: 3px 3px;
-    /*transition: all 1s ease-in-out;*/
 }
 
 #logo {
@@ -71,18 +58,11 @@ body {
 }
 
 #stage {
-    /*position: relative;*/
-    /*display: table;*/
-    /*top: 0%;
-    left: 0%;*/
     background-color: black;
     width: 100vw;
     height: 100vh;
     max-width: 100vw;
     min-height: 100vh;
-    /*border: 3px solid red;*/
-    /*min-width: 100%;
-    min-height: 100%;*/
     overflow: hidden;
     z-index: -98;
 }
@@ -113,16 +93,13 @@ body {
 }
 
 #bgvid {
-    /*margin: 0%;*/
     min-width: 100%;
     min-height: 100%;
     height: auto%;
     z-index: -99;
-    /*transform-origin: 50% 60%;*/
     filter: brightness(0.5) blur(2px);
     transform-origin: center;
     transform: scale(1.2, 1.2);
-    /*transition: all 1s ease-in-out;*/
 }
 
 #stage2 {
@@ -146,14 +123,10 @@ body {
 }
 
 #pics {
-    /*background-color: black;*/
     position: relative;
     margin: 0 auto;
     width: 100vw;
     height: auto;
-    /*top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);*/
     padding-top: 20vh;
     transition: all 0.5s ease;
 }
@@ -166,21 +139,15 @@ body {
 }
 
 #pics .member1 img:hover {
-    /*width: 20vw;
-    height: auto;*/
     transform-origin: top;
     transform: scale(1.8, 1.8);
 }
 
 #pics .member2 img:hover {
-    /*width: 20vw;
-    height: auto;*/
     transform: scale(1.8, 1.8);
 }
 
 #pics .member3 img:hover {
-    /*width: 20vw;
-    height: auto;*/
     transform-origin: bottom;
     transform: scale(1.8, 1.8);
 }
@@ -194,8 +161,6 @@ body {
     min-height: 100vh;
     background-color: gray;
     overflow-x: hidden;
-    /*text-align: center;*/
-    /*overflow: hidden;*/
 }
 
 #nayeon {
@@ -264,33 +229,16 @@ body {
     position: relative;
     top: 0%;
     left: 35%;
-    /*margin-left: 7.5%;*/
     margin: 0% 10%;
     width: 80%;
     padding: 0%;
     text-align: center;
-    /*transform: translateX(40%);*/
-    /*transition: all 0.5s ease;*/
 }
 
-
-/*.playlist ul:hover {
-    margin: 0% 10%;
-    width: 80%;
-    padding: 0%;
-    text-align: center;
-    transform: translateX(-40%);
-}*/
-
 .playlist ul li {
-    /*border: 1px solid white;
-  border-width: 0px 1px 0px 1px;*/
-    /*margin: 0% 5%;*/
-    /*margin: 0px -4px;*/
     width: 16.6%;
     background: black;
     color: white;
-    /*display: inline-block;*/
     float: left;
     list-style: none;
     transition: all 1s ease;
@@ -305,14 +253,6 @@ body {
     font-size: 0.5em;
 }
 
-
-/*.playlist ul li:hover {
-    background: white;
-    color: black;
-    display: inline-block;
-    list-style: none;
-}*/
-
 .subtitle {
     position: relative;
     padding: 3px;
@@ -322,19 +262,6 @@ body {
     background-size: 3px 3px;
     margin-left: 40px;
 }
-
-
-/*.submask {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    background-image: linear-gradient( to right top, transparent 33%, rgba(225, 225, 225, 0.5) 33%, rgba(225, 225, 225, 0.5) 66%, transparent 66%);
-    background-size: 3px 3px;
-}*/
 
 .subtitle p {
     position: relative;
@@ -397,7 +324,6 @@ body {
     color: white;
     width: auto;
     height: auto;
-    /*background-color: rgba(150, 255, 255, 0.5);*/
     text-align: center;
 }
 
@@ -409,10 +335,6 @@ body {
     transition: all 0.0.8s ease-in-out;
 }
 
-
-/*.title img:nth-child(1):hover {
-  transform: rotate(20deg);
-}*/
 
 .mainpic {
     position: absolute;
@@ -428,69 +350,14 @@ body {
 
 
 /*==========  Mobile First Method  ==========*/
-
-
-/* All Device */
-
-
-/* Custom, iPhone Retina : 320px ~ */
-
-@media only screen and (min-width: 320px) {}
-
-
-/* Extra Small Devices, Phones : 480px ~ */
-
-@media only screen and (min-width: 480px) {}
-
-
-/* Small Devices, Tablets : 768px ~ */
-
-@media only screen and (min-width: 768px) {}
-
-
-/* Medium Devices, Desktops : 992px ~ */
-
-@media only screen and (min-width: 992px) {}
-
-
-/* Large Devices, Wide Screens : 1200px ~ */
-
-@media only screen and (min-width: 1200px) {}
-
-
-/*==========  Non-Mobile First Method  ==========*/
-
-
-/* All Device */
-
-
-/* Large Devices, Wide Screens : ~ 1200px */
-
-@media only screen and (max-width: 1200px) {}
-
-
-/* Medium Devices, Desktops : ~ 992px */
-
-@media only screen and (max-width: 992px) {}
-
-
-/* Small Devices, Tablets : ~ 768px */
-
-@media only screen and (max-width: 768px) {}
-
-
 /* Extra Small Devices, Phones : ~ 480px */
 
 @media only screen and (max-width: 480px) {
     div.endline {
         display: none;
     }
-    #pics {
-        /*margin: 30px auto;*/
-        /*margin-top: 15vh;*/
-    }
+
     #pics img {
-        /*display: block;*/
         margin: 0 auto;
         width: 80vw;
         height: auto;
@@ -498,7 +365,6 @@ body {
     }
     #pics img:hover {
         transform: scale(1, 1);
-        /*display: block;*/
         margin: 0 auto;
         width: 80vw;
         height: auto;
@@ -582,18 +448,7 @@ body {
     .subtitle p {
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
-    /*.submask {
-      z-index: 0;
-      background-image: url(nba/nayeon.jpg);
-      background-size: cover;
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      width: 100%;
-      height: 100%;
-      min-width: 100%;
-      min-height: 100%;
-    }*/
+
     .personmember {
         display: none;
     }
@@ -604,15 +459,10 @@ body {
         left: 0%;
     }
     .playlist ul li {
-        /*border: 1px solid white;
-    border-width: 0px 1px 0px 1px;*/
-        /*margin: 0% 5%;*/
-        /*margin: 0px -4px;*/
         width: 16.6%;
         height: 54px;
         background: black;
         color: white;
-        /*display: inline-block;*/
         float: left;
         list-style: none;
         transition: all 1s ease;
@@ -627,12 +477,8 @@ body {
   div.endline {
       display: none;
   }
-  #pics {
-      /*margin: 30px auto;*/
-      /*margin-top: 15vh;*/
-  }
+
   #pics img {
-      /*display: block;*/
       margin: 0 auto;
       width: 80vw;
       height: auto;
@@ -640,7 +486,6 @@ body {
   }
   #pics img:hover {
       transform: scale(1, 1);
-      /*display: block;*/
       margin: 0 auto;
       width: 80vw;
       height: auto;
@@ -724,37 +569,24 @@ body {
   .subtitle p {
       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
-  /*.submask {
-    z-index: 0;
-    background-image: url(nba/nayeon.jpg);
-    background-size: cover;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    min-height: 100%;
-  }*/
+
   .personmember {
       display: none;
   }
+
   .left .endline {
       display: none;
   }
+
   .playlist .scrollmenu {
       left: 0%;
   }
+
   .playlist ul li {
-      /*border: 1px solid white;
-  border-width: 0px 1px 0px 1px;*/
-      /*margin: 0% 5%;*/
-      /*margin: 0px -4px;*/
       width: 16.6%;
       height: 54px;
       background: black;
       color: white;
-      /*display: inline-block;*/
       float: left;
       list-style: none;
       transition: all 1s ease;
