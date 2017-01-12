@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url("https://fonts.googleapis.com/earlyaccess/nanumgothic.css");
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Slabo+27px');
 * {
     font-family: 'Roboto Condensed', 'Slabo 27px', 'Nanum Gothic', sans-serif;
@@ -347,6 +347,18 @@ body {
     width: 100%;
     height: auto;
 }
+
+#canvas {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
 
 
 /*==========  Mobile First Method  ==========*/

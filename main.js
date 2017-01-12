@@ -137,6 +137,7 @@ if ($(window).width() > 480) {
                             display: "block"
                         });
                         $(listes[loop].element2).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).children("audio").trigger('play');
+                        document.getElementById("bgvid").volume = 0;
                         for (let ininerloop = 0; ininerloop < 9; ininerloop++) {
                             if (ininerloop != loop) {
                                 for (let inininerloop = 0; inininerloop < 6; inininerloop++) {
@@ -179,6 +180,7 @@ if ($(window).width() > 480) {
                 console.log("click");
                 $(uls[loop]).children("li").eq(innerloop).css("color", "black");
                 $(uls[loop]).children("li").eq(innerloop).css("background-color", "white");
+                document.getElementById("bgvid").volume = 0;
                 $(leftes[loop]).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).children("audio").trigger('play');
                 $(leftes[loop]).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).css({
                     display: "block"
