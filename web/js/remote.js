@@ -243,5 +243,6 @@ $(".remote .category .children a").click(function(e) {
         for (var i = 0; i < bgArr.length; i++) {
             bgArr[i].remove();
         }
+        $("body").css('background-color', $(".remote").css("background-color"));
     }, 1500);
 })
