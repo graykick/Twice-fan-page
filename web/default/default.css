@@ -1,0 +1,573 @@
+@import "../css/remote.css";
+
+/*remote.css로 수정필요*/
+
+body {
+    /*배경색
+    신청 : background-color: rgb(52, 152, 219)
+    기숙사 : background-color: rgb(142, 68, 173)
+    마이페이지 : background-color: rgb(192, 57, 43)*/
+    font-size: 0.9em;
+}
+
+.main {
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 20vh;
+    left: 16%;
+    min-height: 70%;
+    width: 80%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+.frame {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding-top: 15px;
+    /*overflow-x: hidden;*/
+}
+
+.frame .frametitle {
+    margin-left: 7%;
+}
+
+.frame h1 {
+    margin-bottom: 1%;
+}
+
+.underline {
+    position: relative;
+    right: 0%;
+    height: 8px;
+    margin-right: 0%;
+    width: 93%;
+    background: rgb(211, 84, 0);
+}
+
+
+/*------------------------------------------ index------------------------------------------*/
+
+
+/*--------------------------notice--------------------------------*/
+
+.left .notice {
+    position: relative;
+    padding-left: 0%;
+    margin-left: 7%;
+}
+
+.left .notice li {
+    list-style-type: none;
+    margin: 4% 0%;
+    width: 93%;
+}
+
+.left .notice li .title {
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: 600;
+    width: 80%;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.left .notice li p.date {
+    color: gray;
+    float: right;
+    vertical-align: bottom;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+
+/*--------------------------right--------------------------------*/
+
+.right .underline {
+    background: rgb(41, 128, 185);
+}
+
+.right .menues {
+    position: relative;
+    height: 88%;
+    width: 93%;
+    margin-left: 7%;
+}
+
+.right .meal {
+    position: relative;
+    height: 20%;
+    margin: 16px 0;
+}
+
+.right .meal h2 {
+    /*float: left;*/
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
+    /*padding: 5% 0%;*/
+}
+
+.right .meal p {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    margin-left: 4%;
+    /*float: right;*/
+}
+
+.right .info {
+    position: relative;
+    width: 90%;
+    background-color: #f0f0f0;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.right .info:hover {
+    background-color: rgb(41, 128, 185);
+    color: white;
+}
+
+.right img {
+    vertical-align: middle;
+    /*height: 30%;*/
+    height: 25px;
+}
+
+
+/*------------------------------------------ dorm main------------------------------------------*/
+
+
+/*--------------------------etc--------------------------------*/
+
+body {
+    background-color: rgb(142, 68, 173);
+}
+
+.underline {
+    background: rgb(142, 68, 173);
+}
+
+
+/*--------------------------articlelist--------------------------------*/
+
+.articlelist {
+    width: 100%;
+}
+
+
+/*--------------------------table--------------------------------*/
+
+.articlelist table {
+    border-collapse: collapse;
+    width: 86%;
+    margin-top: 2%;
+    margin-left: 7%;
+}
+
+.articlelist table th:nth-child(1) {
+    width: 5%;
+}
+
+.articlelist table th:nth-child(2) {
+    width: 85%;
+}
+
+.articlelist table th:nth-child(3) {
+    width: 10%;
+}
+
+.articlelist table .tableheader {
+    background-color: rgb(244, 244, 244);
+}
+
+.articlelist table .tableheader th {
+    padding: 0;
+    border: 0;
+    border-top: 1px solid rgb(142, 68, 173);
+    border-bottom: 2px solid rgb(142, 68, 173);
+    color: rgb(142, 68, 173);
+    height: 32px;
+}
+
+.articlelist table td {
+    border-bottom: 1px solid rgb(142, 68, 173);
+    height: 32px;
+}
+
+.articlelist table tr:hover {
+    background-color: rgb(244, 244, 244);
+}
+
+.articlelist table td:nth-child(2) {
+    text-align: left;
+    font-weight: 900;
+    font-size: 0.9em;
+}
+
+.articlelist table td:nth-child(3), table td:nth-child(1) {
+    text-align: center;
+    color: rgb(100, 100, 100);
+    font-size: 0.8em;
+    font-weight: 900;
+}
+
+
+/*------------------------------------------ dorm main article------------------------------------------*/
+
+.articlecontainer {
+    width: 100%;
+}
+
+
+/*--------------------------article--------------------------------*/
+
+.article {
+    line-height: 150%;
+    margin-left: 7%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.article p {
+    width: 93%;
+}
+
+.articlecontainer hr {
+    width: 86%;
+}
+
+.articlecontainer .frametitle {
+    position: relative;
+}
+
+.articlecontainer .frametitle p {
+    font-size: 0.8em;
+    font-weight: 900;
+    color: rgb(100, 100, 100);
+    margin-bottom: 0;
+    position: absolute;
+    margin-bottom: 10px;
+    right: 7%;
+    bottom: 0%;
+    /*float: right;*/
+}
+
+.articlecontainer h2 {
+    display: inline-block;
+    margin-bottom: 1%;
+}
+
+
+/*-------------------------------------qna list.-------------------------------*/
+
+.qna table tr:nth-child(2), .qna table tr:nth-child(3) {
+    background-color: rgb(142, 68, 173);
+}
+
+.qna table tr:nth-child(2) td, .qna table tr:nth-child(3) td {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+
+/*-------------------------------------comment.-------------------------------*/
+
+.commentinput {
+    margin-left: 7%;
+    /*margin-bottom: 100px;*/
+}
+
+.commentinput table {
+    width: 93%;
+}
+
+.commentinput table tr td:nth-child(1) {
+    width: 80%;
+}
+
+.commentinput table tr td:nth-child(2) {
+    width: 20%;
+}
+
+.commentinput input {
+    height: 30px;
+}
+
+.commentinput button {
+    background-color: rgb(142, 68, 173);
+    border: none;
+    height: 36px;
+    width: 99%;
+    border: 2px solid rgb(142, 68, 173);
+    border-radius: 4px;
+    transition: all 1s ease;
+    color: white;
+}
+
+.commentinput button:focus {
+    background-color: rgb(162, 88, 193);
+}
+
+.commentinput input[type="text"] {
+    height: 30px;
+    width: 97%;
+    border: 2px solid rgb(142, 68, 173);
+    border-radius: 4px;
+    padding-left: 1%;
+    transition: all 1s ease;
+}
+
+.commentinput input[type="text"]:focus {
+    border: 2px solid rgb(162, 88, 193);
+}
+
+.commentinput table td:nth-child(3), .commentinput table td:nth-child(1) {
+    text-align: left;
+}
+
+.comment {
+    margin-left: 7%;
+}
+
+.comment table {
+    width: 93%;
+    border-collapse: collapse;
+}
+
+.comment tr {
+    border-bottom: 1px solid gray;
+}
+
+.comment table tr td:nth-child(1) {
+    width: 8%;
+    min-width: 60px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.comment table tr td:nth-child(3) {
+    width: 5%;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.comment table tr td:nth-child(2) {
+    width: 87%;
+    font-size: 0.9em;
+}
+
+.comment table .date {
+    display: inline-block;
+    color: rgb(100, 100, 100);
+    font-size: 0.8em;
+    font-weight: 900;
+}
+
+.comment table td p, .comment table td h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+
+/*-------------------------------------mypage.-------------------------------*/
+
+body {
+    background-color: rgb(192, 57, 43);
+}
+
+.mypage {
+    width: 100%;
+}
+
+.left .frametitle .underline {
+    background-color: rgb(192, 57, 43);
+}
+
+.left .info {
+    width: 39.5%;
+    height: 80%;
+    margin-left: 7%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+}
+
+.mypage .info table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.mypage .info table tr {
+    border-bottom: 1px solid gray;
+}
+
+.mypage .info table tr:nth-child(3) {
+    border-bottom: 1px solid black;
+}
+
+.mypage .info table tr td:nth-child(1) {
+    text-align: left;
+    padding-left: 10px;
+    min-width: 40px;
+}
+
+.mypage .info table tr td:nth-child(2) {
+    font-size: 0.8em;
+    padding: 10px;
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+
+/* All Device */
+
+
+/* Large Devices, Wide Screens : ~ 1200px */
+
+@media only screen and (max-width: 1200px) {}
+
+
+/* Medium Devices, Desktops : ~ 992px */
+
+@media only screen and (max-width: 992px) {
+    .logo {
+        display: none;
+    }
+    .main {
+        /*width: 50%;*/
+        top: 20vh;
+        left: 5%;
+        width: 90%;
+    }
+    .frame {
+        width: 50%;
+    }
+    .right .info {
+        width: 89%;
+    }
+    .left ul li .title {
+        width: 70%;
+    }
+    .frame {
+        width: 100%;
+    }
+    .food {
+        float: none;
+    }
+}
+
+
+/* Small Devices, Tablets : ~ 768px */
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+    .main {
+        /*width: 50%;*/
+        top: 20vh;
+        left: 5%;
+        width: 90%;
+    }
+    .right .info {
+        width: 89%;
+    }
+    .left ul li .title {
+        width: 70%;
+    }
+    .frame {
+        width: 100%;
+    }
+    .right {
+        float: none;
+    }
+    .mypage .info {
+        width: 86%;
+    }
+}
+
+
+/* Extra Small Devices, Phones : ~ 480px */
+
+@media only screen and (max-width: 480px) {
+    .logo {
+        display: none;
+    }
+    .main {
+        /*width: 50%;*/
+        top: 20vh;
+        left: 5%;
+        width: 90%;
+    }
+    .right .info {
+        width: 89%;
+    }
+    .left ul li .title {
+        width: 70%;
+    }
+    .frame {
+        width: 100%;
+    }
+    .right {
+        float: none;
+    }
+    .mypage .info {
+        width: 86%;
+    }
+    .left .notice li .title {
+        width: 70%;
+    }
+}
+
+
+/* Custom, iPhone Retina : ~ 320px */
+
+@media only screen and (max-width: 320px) {
+    .logo {
+        display: none;
+    }
+    .main {
+        /*width: 50%;*/
+        top: 20vh;
+        left: 5%;
+        width: 90%;
+    }
+    .right .info {
+        width: 89%;
+    }
+    .left ul li .title {
+        width: 70%;
+    }
+    .frame {
+        width: 100%;
+    }
+    .right {
+        float: none;
+    }
+    .right .info {
+        width: 85%;
+    }
+    .mypage .info {
+        width: 86%;
+    }
+    .left .notice li .title {
+        font-size: 1.2em;
+        width: 70%;
+    }
+    .right .meal h2 {
+        font-size: 1.2em;
+    }
+    .right .meal p {
+        font-size: 0.9em;
+    }
+}
