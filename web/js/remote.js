@@ -239,10 +239,11 @@ $(".remote .category .children a").click(function(e) {
     setTimeout(function() {
         //window.location = goTo;
         //백그라운드 애니메이션을 위한 DOM을 삭제함
+        console.log("asdfasdfasdf");
         var bgArr = $(".bg");
         for (var i = 0; i < bgArr.length; i++) {
-            bgArr[i].remove();
+            $(bgArr[i]).remove();
         }
-        $("body").css('background-color', $(".remote").css("background-color"));
+        $("body").css({'background-color':$(".remote").css("background-color")});
     }, 1500);
 })
