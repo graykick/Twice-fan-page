@@ -202,6 +202,7 @@ if (!isMobile) {
 $(".remote .category .children a").click(function(e) {
     e.preventDefault(); // prevent default anchor behavior
     var goTo = this.getAttribute("href"); // store anchor href
+    var rollBackColor = $(".remote").css("background-color");
 
     //백그라운드 애니메이션을 위한 DOM을 생성함
     $('<div/>', {
@@ -238,7 +239,8 @@ $(".remote .category .children a").click(function(e) {
 
     setTimeout(function() {
         //window.location = goTo;
-        $("body").css({'background-color':$(".remote").css("background-color")});
+        console.log($(".remote").css("background-color"));
+        $("body").css({'background-color':rollBackColor});
         //백그라운드 애니메이션을 위한 DOM을 삭제함
         console.log("asdfasdfasdf");
         var bgArr = $(".bg");
