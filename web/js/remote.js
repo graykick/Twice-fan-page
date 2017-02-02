@@ -82,7 +82,7 @@ $(".remote .category").children("a").eq(2).click(function() {
 })
 
 
-
+//모바일 기기 판단
 var isMobile = false; //initiate as false
 // device detection
 if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
@@ -193,10 +193,33 @@ if (!isMobile) {
         $(".remote .category .application").hide(0);
         $(".remote .category .dom").hide(0);
     })
+
+
 }
 
+$(window).scroll(function() {
+    var vh = $(window).height()/100;
+    var vw = $(window).width()/100;
 
-
+    console.log("scroll " + $(window).scrollTop() + ", "+ 17*vh);
+    if ($(window).scrollTop() > 17*vh) {
+        $(".remote").css({
+            "background-color": $("body").css("background-color"),
+            "border-radius": "0",
+            "top": "0",
+            "width": "100vw",
+            "left": "0"
+        });
+    } else if ($(window).scrollTop() <= 6*vh) {
+      $(".remote").css({
+          "background-color": "white",
+          "border-radius": "5px",
+          "top": "1%",
+          "left": "5%",
+          "width": "90%"
+      });
+    }
+})
 
 
 $(".remote .category .children a").click(function(e) {
@@ -240,7 +263,9 @@ $(".remote .category .children a").click(function(e) {
     setTimeout(function() {
         //window.location = goTo;
         console.log($(".remote").css("background-color"));
-        $("body").css({'background-color':rollBackColor});
+        $("body").css({
+            'background-color': rollBackColor
+        });
         //백그라운드 애니메이션을 위한 DOM을 삭제함
         console.log("asdfasdfasdf");
         var bgArr = $(".bg");
