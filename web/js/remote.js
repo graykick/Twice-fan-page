@@ -1,10 +1,20 @@
 //신청탭 over 이벤트
 $(".remote .category").children("a").eq(0).click(function() {
     // 신청 text를 white로
-    $(".remote .category").children("a").eq(0).animate({
-        fontSize: "1.5em",
-        color: "white"
-    })
+    if ($(window).width() > 480) {
+        $(".remote .category").children("a").eq(0).animate({
+            fontSize: "1.5em",
+            color: "white"
+        })
+    } else {
+        $(".remote .category").children("a").eq(0).animate({
+            fontSize: "0.9em",
+            color: "white"
+        })
+        $(".children a").animate({
+            fontSize: "0.9em"
+        })
+    }
 
     $(".remote .category").children("a").eq(0).css({})
 
@@ -32,10 +42,20 @@ $(".remote .category").children("a").eq(0).click(function() {
 //기숙사탭 over 이벤트
 $(".remote .category").children("a").eq(1).click(function() {
     //기숙사 text를 white로
-    $(".remote .category").children("a").eq(1).animate({
-        fontSize: "1.5em",
-        color: "white"
-    })
+    if ($(window).width() > 480) {
+        $(".remote .category").children("a").eq(1).animate({
+            fontSize: "1.5em",
+            color: "white"
+        })
+    } else {
+        $(".remote .category").children("a").eq(2).animate({
+            fontSize: "0.9em",
+            color: "white"
+        })
+        $(".children a").animate({
+            fontSize: "0.9em"
+        })
+    }
 
     $(".remote .category").children("a").eq(1).children("p").animate({
         padding: "0"
@@ -198,11 +218,11 @@ if (!isMobile) {
 }
 
 $(window).scroll(function() {
-    var vh = $(window).height()/100;
-    var vw = $(window).width()/100;
+    var vh = $(window).height() / 100;
+    var vw = $(window).width() / 100;
 
-    console.log("scroll " + $(window).scrollTop() + ", "+ 17*vh);
-    if ($(window).scrollTop() > 17*vh) {
+    console.log("scroll " + $(window).scrollTop() + ", " + 17 * vh);
+    if ($(window).scrollTop() > 17 * vh) {
         $(".remote").css({
             "background-color": $("body").css("background-color"),
             "border-radius": "0",
@@ -210,14 +230,14 @@ $(window).scroll(function() {
             "width": "100vw",
             "left": "0"
         });
-    } else if ($(window).scrollTop() <= 6*vh) {
-      $(".remote").css({
-          "background-color": "white",
-          "border-radius": "5px",
-          "top": "1%",
-          "left": "5%",
-          "width": "90%"
-      });
+    } else if ($(window).scrollTop() <= 6 * vh) {
+        $(".remote").css({
+            "background-color": "white",
+            "border-radius": "5px",
+            "top": "1%",
+            "left": "5%",
+            "width": "90%"
+        });
     }
 })
 

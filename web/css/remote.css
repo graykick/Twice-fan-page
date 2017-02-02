@@ -238,8 +238,8 @@ header .logo p:hover {
         top: 1%;
         left: 5%;
         width: 90%;
-        min-height: 17vh;
-        height: 17vh;
+        min-height: 12vh;
+        height: 12vh;
         z-index: 2;
     }
     .remote .category {
@@ -279,8 +279,8 @@ header .logo p:hover {
         top: 1%;
         left: 5%;
         width: 90%;
-        min-height: 17vh;
-        height: 17vh;
+        min-height: 13vh;
+        height: 13vh;
         z-index: 2;
     }
     .remote .category {
