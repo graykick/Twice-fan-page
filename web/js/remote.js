@@ -12,7 +12,7 @@ $(".remote .category").children("a").eq(0).click(function() {
             color: "white"
         })
         $(".children a").animate({
-            fontSize: "0.9em"
+            fontSize: "1em"
         })
     }
 
@@ -21,7 +21,7 @@ $(".remote .category").children("a").eq(0).click(function() {
     $(".remote .category").children("a").eq(0).children("p").animate({
         padding: "0"
     })
-
+    
     //remote background-color를 신청색으로
     $(".remote").animate({
         backgroundColor: "rgb(52, 152, 219)",
@@ -53,7 +53,7 @@ $(".remote .category").children("a").eq(1).click(function() {
             color: "white"
         })
         $(".children a").animate({
-            fontSize: "0.9em"
+            fontSize: "1em"
         })
     }
 
