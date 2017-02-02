@@ -19,6 +19,7 @@ body {
     min-height: 70%;
     width: 80%;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+    margin-bottom: 20px;
 }
 
 .frame {
@@ -27,6 +28,7 @@ body {
     height: 100%;
     float: left;
     padding-top: 15px;
+    margin-bottom: 20px;
     /*overflow-x: hidden;*/
 }
 

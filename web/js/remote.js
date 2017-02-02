@@ -213,34 +213,32 @@ if (!isMobile) {
         $(".remote .category .application").hide(0);
         $(".remote .category .dom").hide(0);
     })
+    $(window).scroll(function() {
+        var vh = $(window).height() / 100;
+        var vw = $(window).width() / 100;
+
+        console.log("scroll " + $(window).scrollTop() + ", " + 17 * vh);
+        if ($(window).scrollTop() > 17 * vh) {
+            $(".remote").css({
+                "background-color": $("body").css("background-color"),
+                "border-radius": "0",
+                "top": "0",
+                "width": "100vw",
+                "left": "0"
+            });
+        } else if ($(window).scrollTop() <= 6 * vh) {
+            $(".remote").css({
+                "background-color": "white",
+                "border-radius": "5px",
+                "top": "1%",
+                "left": "5%",
+                "width": "90%"
+            });
+        }
+    })
 
 
 }
-
-$(window).scroll(function() {
-    var vh = $(window).height() / 100;
-    var vw = $(window).width() / 100;
-
-    console.log("scroll " + $(window).scrollTop() + ", " + 17 * vh);
-    if ($(window).scrollTop() > 17 * vh) {
-        $(".remote").css({
-            "background-color": $("body").css("background-color"),
-            "border-radius": "0",
-            "top": "0",
-            "width": "100vw",
-            "left": "0"
-        });
-    } else if ($(window).scrollTop() <= 6 * vh) {
-        $(".remote").css({
-            "background-color": "white",
-            "border-radius": "5px",
-            "top": "1%",
-            "left": "5%",
-            "width": "90%"
-        });
-    }
-})
-
 
 $(".remote .category .children a").click(function(e) {
     e.preventDefault(); // prevent default anchor behavior
