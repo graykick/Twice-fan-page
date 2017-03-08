@@ -74,168 +74,113 @@ document.getElementById("stage2").addEventListener("mousemove", () => {
 })
 
 
+//
+// if ($(window).width() > 480) {
+//     var menuDowun = false;
+//     var uls = $(".scrollmenu");
+//     var leftes = $(".left");
+//     var listes = [];
+//
+//     for (let loop = 0; loop < 9; loop++) {
+//         listes[loop] = {};
+//         listes[loop].menuDowun = false;
+//         listes[loop].element = uls[loop];
+//         listes[loop].element2 = leftes[loop];
+//         uls[loop].addEventListener("mousedown", () => {
+//             listes[loop].menuDowun = true;
+//             console.log("down");
+//         })
+//
+//         uls[loop].addEventListener("mouseup", () => {
+//             listes[loop].menuDowun = false;
+//             console.log("up");
+//         })
+//
+//         uls[loop].addEventListener("mouseleave", () => {
+//             listes[loop].menuDowun = false;
+//             console.log("leave");
+//         })
+//
+//         uls[loop].addEventListener("mousemove", () => {
+//             if (listes[loop].menuDowun) {
+//                 let pxOffSet = $("#stage").width() * 0.1261904761904762;
+//                 var style = getComputedStyle(listes[loop].element);
+//                 var left = style.getPropertyValue("left");
+//                 var left2 = left.split("p");
+//                 left2[0] *= 1;
+//                 console.log("drag = " + (1 + left2[0]) + " offset = " + pxOffSet);
+//                 if (moveX > 0) {
+//                     listes[loop].element.style.left = left2[0] + 3 + "px";
+//                 } else {
+//                     listes[loop].element.style.left = left2[0] - 3 + "px";
+//                 }
+//                 for (let innerloop = 0; innerloop < 6; innerloop++) {
+//                     let center = listes[loop].element.offsetWidth / 2;
+//                     let LIwidth = $(listes[loop].element).children("li").eq(innerloop).width();
+//                     let LIleft = style.getPropertyValue("left");
+//                     let LIleft2 = left.split("p");
+//                     LIleft2[0] *= 1;
+//                     console.log("checking " + (1 + innerloop) + " test = " + (LIleft2[0] + (innerloop * LIwidth)) + " center = " + center);
+//                     if ((left2[0] + (innerloop * LIwidth) + (LIwidth / 2)) > (center - (LIwidth / 2)) && (left2[0] + (innerloop * LIwidth) + (LIwidth / 2)) < (center + (LIwidth / 2))) {
+//                         $(listes[loop].element).children("li").eq(innerloop).css("background-color", "white");
+//                         $(listes[loop].element).children("li").eq(innerloop).css("color", "black");
+//                         $(listes[loop].element2).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).css({
+//                             display: "block"
+//                         });
+//                         $(listes[loop].element2).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).children("audio").trigger('play');
+//                         document.getElementById("bgvid").volume = 0;
+//                         for (let ininerloop = 0; ininerloop < 9; ininerloop++) {
+//                             if (ininerloop != loop) {
+//                                 for (let inininerloop = 0; inininerloop < 6; inininerloop++) {
+//                                     $(listes[ininerloop].element2).children(".playlist").children(".subtitle").children("div").eq(inininerloop + 1).children("audio").trigger('load');
+//                                 }
+//                             }
+//                         }
+//                     } else {
+//                         $(listes[loop].element).children("li").eq(innerloop).css("color", "white");
+//                         $(listes[loop].element).children("li").eq(innerloop).css("background-color", "black");
+//
+//                         //  $(listes[loop].element).children("li").eq(innerloop).css("background-color", "balck");
+//                         $(listes[loop].element2).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).css({
+//                             display: "none"
+//                         });
+//                         $(listes[loop].element2).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).children("audio").trigger('load');
+//                     }
+//                 }
+//             }
+//         })
+//     }
+// } else if ($(window).width() <= 480) {
+var uls = $(".scrollmenu");
+var leftes = $(".left");
+var listes = [];
 
-if ($(window).width() > 480) {
-    var menuDowun = false;
-    var uls = $(".scrollmenu");
-    var leftes = $(".left");
-    var listes = [];
-
-    for (let loop = 0; loop < 9; loop++) {
-        listes[loop] = {};
-        listes[loop].menuDowun = false;
-        listes[loop].element = uls[loop];
-        listes[loop].element2 = leftes[loop];
-        uls[loop].addEventListener("mousedown", () => {
-            listes[loop].menuDowun = true;
-            console.log("down");
-        })
-
-        uls[loop].addEventListener("mouseup", () => {
-            listes[loop].menuDowun = false;
-            console.log("up");
-        })
-
-        uls[loop].addEventListener("mouseleave", () => {
-            listes[loop].menuDowun = false;
-            console.log("leave");
-        })
-
-        uls[loop].addEventListener("mousemove", () => {
-            if (listes[loop].menuDowun) {
-                let pxOffSet = $("#stage").width() * 0.1261904761904762;
-                var style = getComputedStyle(listes[loop].element);
-                var left = style.getPropertyValue("left");
-                var left2 = left.split("p");
-                left2[0] *= 1;
-                console.log("drag = " + (1 + left2[0]) + " offset = " + pxOffSet);
-                if (moveX > 0) {
-                    //document.querySelector("#left .playlist ul").style.left = (document.querySelector("#left .playlist ul").offsetLeft+3-212)+"px";
-                    listes[loop].element.style.left = left2[0] + 3 + "px";
-                } else {
-                    //document.querySelector("#left .playlist ul").style.left = (document.querySelector("#left .playlist ul").offsetLeft-3-212)+"px";
-                    listes[loop].element.style.left = left2[0] - 3 + "px";
-                }
-                for (let innerloop = 0; innerloop < 6; innerloop++) {
-                    let center = listes[loop].element.offsetWidth / 2;
-                    // let LIwidth = document.querySelector("#left .playlist ul li:nth-child(" + (loop + 1) + ")").offsetWidth;
-                    let LIwidth = $(listes[loop].element).children("li").eq(innerloop).width();
-                    // console.log("computed test = "+$(listes[loop].element).children("li").eq(innerloop));
-                    // let LIstyle = getComputedStyle($(listes[loop].element).children("li").eq(innerloop));
-                    let LIleft = style.getPropertyValue("left");
-                    let LIleft2 = left.split("p");
-                    LIleft2[0] *= 1;
-                    console.log("checking " + (1 + innerloop) + " test = " + (LIleft2[0] + (innerloop * LIwidth)) + " center = " + center);
-                    if ((left2[0] + (innerloop * LIwidth) + (LIwidth / 2)) > (center - (LIwidth / 2)) && (left2[0] + (innerloop * LIwidth) + (LIwidth / 2)) < (center + (LIwidth / 2))) {
-                        // document.querySelector("#left .playlist ul li:nth-child(" + (loop + 1) + ")").style.background = "white";
-                        // document.querySelector("#left .playlist ul li:nth-child(" + (loop + 1) + ")").style.color = "black";
-                        // document.querySelector("#left .playlist .subtitle div:nth-child(" + (loop + 2) + ")").style.display = "block";
-                        // document.querySelector("#left .playlist .subtitle div:nth-child(" + (loop + 2) + ")" + " audio").play();
-                        $(listes[loop].element).children("li").eq(innerloop).css("background-color", "white");
-                        $(listes[loop].element).children("li").eq(innerloop).css("color", "black");
-                        $(listes[loop].element2).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).css({
-                            display: "block"
-                        });
-                        $(listes[loop].element2).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).children("audio").trigger('play');
-                        document.getElementById("bgvid").volume = 0;
-                        for (let ininerloop = 0; ininerloop < 9; ininerloop++) {
-                            if (ininerloop != loop) {
-                                for (let inininerloop = 0; inininerloop < 6; inininerloop++) {
-                                    $(listes[ininerloop].element2).children(".playlist").children(".subtitle").children("div").eq(inininerloop + 1).children("audio").trigger('load');
-                                }
-                            }
-                        }
-                    } else {
-                        // document.querySelector("#left .playlist ul li:nth-child(" + (loop + 1) + ")").style.color = "white";
-                        // document.querySelector("#left .playlist ul li:nth-child(" + (loop + 1) + ")").style.background = "black";
-                        // document.querySelector("#left .playlist .subtitle div:nth-child(" + (loop + 2) + ")").style.display = "none";
-                        // document.querySelector("#left .playlist .subtitle div:nth-child(" + (loop + 2) + ")" + " audio").load();
-                        $(listes[loop].element).children("li").eq(innerloop).css("color", "white");
-                        $(listes[loop].element).children("li").eq(innerloop).css("background-color", "black");
-
-                        //  $(listes[loop].element).children("li").eq(innerloop).css("background-color", "balck");
-                        $(listes[loop].element2).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).css({
-                            display: "none"
-                        });
-                        $(listes[loop].element2).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).children("audio").trigger('load');
-                    }
+for (let loop = 0; loop < 9; loop++) {
+    for (let innerloop = 0; innerloop < 6; innerloop++) {
+        $(uls[loop]).children("li").eq(innerloop).click(() => {
+            for (let ininerloop = 0; ininerloop < 9; ininerloop++) {
+                for (let inininerloop = 0; inininerloop < 6; inininerloop++) {
+                    $(leftes[ininerloop]).children(".playlist").children(".subtitle").children("div").eq(inininerloop + 1).children("audio").trigger('load');
                 }
             }
-        })
-    }
-} else if ($(window).width() <= 480) {
-    var uls = $(".scrollmenu");
-    var leftes = $(".left");
-    var listes = [];
-
-    for (let loop = 0; loop < 9; loop++) {
-        for (let innerloop = 0; innerloop < 6; innerloop++) {
-            $(uls[loop]).children("li").eq(innerloop).click(() => {
-                for (let ininerloop = 0; ininerloop < 9; ininerloop++) {
-                    for (let inininerloop = 0; inininerloop < 6; inininerloop++) {
-                        $(leftes[ininerloop]).children(".playlist").children(".subtitle").children("div").eq(inininerloop + 1).children("audio").trigger('load');
-                    }
-                }
-
-                console.log("click");
-                $(uls[loop]).children("li").eq(innerloop).css("color", "black");
-                $(uls[loop]).children("li").eq(innerloop).css("background-color", "white");
-                document.getElementById("bgvid").volume = 0;
-                $(leftes[loop]).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).children("audio").trigger('play');
-                $(leftes[loop]).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).css({
-                    display: "block"
-                });
-                for (let ininerloop = 0; ininerloop < 6; ininerloop++) {
-                    if (ininerloop != innerloop) {
-                        $(uls[loop]).children("li").eq(ininerloop).css("color", "white");
-                        $(uls[loop]).children("li").eq(ininerloop).css("background-color", "black");
-                        $(leftes[loop]).children(".playlist").children(".subtitle").children("div").eq(ininerloop + 1).css({
-                            display: "none"
-                        });
-                    }
-                }
-
+            console.log("click");
+            $(uls[loop]).children("li").eq(innerloop).css("color", "black");
+            $(uls[loop]).children("li").eq(innerloop).css("background-color", "white");
+            document.getElementById("bgvid").volume = 0;
+            $(leftes[loop]).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).children("audio").trigger('play');
+            $(leftes[loop]).children(".playlist").children(".subtitle").children("div").eq(innerloop + 1).css({
+                display: "block"
             });
-        }
+            for (let ininerloop = 0; ininerloop < 6; ininerloop++) {
+                if (ininerloop != innerloop) {
+                    $(uls[loop]).children("li").eq(ininerloop).css("color", "white");
+                    $(uls[loop]).children("li").eq(ininerloop).css("background-color", "black");
+                    $(leftes[loop]).children(".playlist").children(".subtitle").children("div").eq(ininerloop + 1).css({
+                        display: "none"
+                    });
+                }
+            }
+
+        });
     }
-}
-
-
-
-
-
-
-// for(let loop = 0; loop<9; loop++){
-//   document.querySelector("#pics img:nth-child("+(loop+1)+")").addEventListener("mouseover", ()=>{
-//     console.log("over");
-//   //  document.querySelector("#pics img:nth-child("+(loop+1)+")").style.width = "20%";
-//     for(let innerLoop = 0; innerLoop < 9; innerLoop++){
-//       if(innerLoop != loop){
-//         document.querySelector("#pics img:nth-child("+(innerLoop+1)+")").style.filter = "blur(2px)";
-//       }
-//     }
-//   })
-//
-//   document.querySelector("#pics img:nth-child("+(loop+1)+")").addEventListener("mouseleave", ()=>{
-//     console.log("leave");
-//   //  document.querySelector("#pics img:nth-child("+(loop+1)+")").style.width = "9%";
-//
-//     for(let innerLoop = 0; innerLoop < 9; innerLoop++){
-//       if(innerLoop != loop){
-//         document.querySelector("#pics img:nth-child("+(innerLoop+1)+")").style.filter = "blur(0px)";
-//       }
-//     }
-//   })
-// }
-
-function makeCenter() {
-    let bigArrW = document.getElementsByTagName("body");
-    let bigW = bigArrW[0].offsetWidth;
-    //  console.log("big = "+bigW);
-    let smallW = document.getElementById("bgvid").offsetWidth;
-    //  console.log("small = "+smallW);
-
-    let resultW = bigW - smallW;
-    //  console.log("size = "+resultW);
-    return "translate(" + resultW + "px," + "0)" + "scale(1.2,1.2)";
 }

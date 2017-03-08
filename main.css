@@ -235,6 +235,10 @@ body {
     text-align: center;
 }
 
+.playlist .scrollmenu {
+    left: 0%;
+}
+
 .playlist ul li {
     width: 16.6%;
     background: black;
